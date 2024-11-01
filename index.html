@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Flower Bank App</title>
+</head>
+
+<body class="bg-gray-100 text-gray-900 h-screen content-center bg-no-repeat bg-cover  " style="background-image: url('https://img.freepik.com/premium-vector/global-currency-background_115579-405.jpg?semt=ais_hybrid');">
+    <div class="container mx-auto shadow-2xl ">
+        <div class="max-w-sm h-2/3 mx-auto bg-white rounded-lg shadow-lg py-11 px-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
+            <h1 class="text-4xl font-bold text-center mb-6 text-yellow-400 shadow-md">Flower Bank App</h1>
+
+            <!-- Current Balance Display -->
+            <div id="balance-display" class="text-center mb-4">
+                <h2 class="text-xl font-bold">Current Balance: $<span id="balance">0.00</span></h2>
+            </div>
+
+            <!-- Add Money Button -->
+            <div class="text-center mb-3">
+                <button id="add-money-btn" class="bg-green-500 text-white px-4 py-1 rounded hover:bg-white hover:text-black font-bold transition-all hover:scale-110 ease-in-out delay-150 hover:border-black hover:border-2">Add Money</button>
+            </div>
+
+            <!-- Withdraw Money Button -->
+            <div class="text-center mb-3">
+                <button id="withdraw-money-btn" class="bg-red-500 text-white px-4 py-1 rounded hover:bg-white hover:text-black font-bold transition-all hover:scale-110 ease-in-out hover:border-black hover:border-2">Withdraw Money</button>
+            </div>
+
+            <!-- Transaction History Button -->
+            <div class="text-center">
+                <button id="transaction-history-btn" class="bg-blue-500 text-white px-4 py-1 rounded  hover:bg-white hover:text-black font-bold transition-all hover:scale-110 ease-in-out hover:border-black hover:border-2">Transaction History</button>
+            </div>
+        </div>
+
+        <!-- Transaction History Modal -->
+        <div id="transaction-modal" class=" hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white p-6 rounded-lg shadow-lg w-4/5 max-w-lg">
+                <h2 class="text-xl font-bold mb-4">Transaction History</h2>
+                <table class="w-full text-left">
+                    <thead>
+                        <tr>
+                            <th class="py-2">Date</th>
+                            <th class="py-2">Type</th>
+                            <th class="py-2">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transaction-list">
+                        <!-- Transaction entries go here -->
+                    </tbody>
+                </table>
+                <button id="close-transaction-modal" class="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
