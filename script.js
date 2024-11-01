@@ -80,8 +80,3 @@
     updateBalanceDisplay();
     updateTransactionHistory();
 
-
-    add.addEventListener ("beforeunload", (e) => {
-        e.preventDefault();
-        e.returnValue = "";
-    })
